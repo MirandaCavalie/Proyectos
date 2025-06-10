@@ -136,6 +136,9 @@ def create_accuracy_bar(accuracies, labels, title):
 if section == "📋 Resumen General":
     st.header("Resumen General del Sistema")
     
+    # Nota importante sobre la base de cálculo
+    st.info("📊 **Nota Importante:** Todos los accuracy mostrados en este dashboard fueron calculados sobre una base de **2,388,716 documentos** que consideran únicamente aquellos con **feedback consistente**.")
+    
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
