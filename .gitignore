@@ -1,5 +1,4 @@
 # Archivos de credenciales - NUNCA subir
-*.json
 .streamlit/secrets.toml
 kriptos-4624e10fab77.json
 bp_templates_bq.parquet
