@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # Configuración
-PARQUET_FILE = "BP_Templates_bigquery_ready.parquet"
+PARQUET_FILE = "bp_templates_bq.parquet"
 
 def load_data():
     """Carga datos desde archivo Parquet"""
@@ -34,6 +34,9 @@ def process_data(df):
     # Limpiar datos
     if 'doc_name' in df.columns:
         df['doc_name_clean'] = df['doc_name'].fillna('Sin nombre')
+        # Eliminar registros UNGENERAZIBLE
+        df = df.query("doc_name != 'UNGENERAZIBLE'")
+        print(f"✅ Registros después de eliminar 'UNGENERAZIBLE': {len(df):,}")
     
     if 'classifications' in df.columns:
         df['classifications_clean'] = df['classifications'].fillna('Sin clasificación')
@@ -45,6 +48,69 @@ def process_data(df):
     print(f"🔢 Contadores detectados: {len(counter_columns)}")
     
     return df, counter_columns
+
+def calculate_top_documents(df, counter_columns):
+    """Calcula los top documentos por frecuencia y por clasificación"""
+    print("📋 Calculando top documentos...")
+    
+    top_documents = {}
+    
+    # 1. Top 10 documentos en general (por frecuencia)
+    if 'doc_name_clean' in df.columns:
+        general_top = df['doc_name_clean'].value_counts().head(10)
+        top_documents['general'] = [
+            {
+                'document_name': str(doc_name),
+                'frequency': int(count),
+                'percentage': round((count / len(df)) * 100, 2)
+            }
+            for doc_name, count in general_top.items()
+        ]
+    
+    # 2. Top 10 documentos por clasificación
+    if 'classifications_clean' in df.columns and 'doc_name_clean' in df.columns:
+        top_documents['by_classification'] = {}
+        
+        # Obtener las clasificaciones más comunes
+        top_classifications = df['classifications_clean'].value_counts().head(10).index
+        
+        for classification in top_classifications:
+            class_data = df[df['classifications_clean'] == classification]
+            if len(class_data) > 0:
+                class_top_docs = class_data['doc_name_clean'].value_counts().head(10)
+                
+                # Calcular también métricas adicionales para cada documento
+                doc_stats = []
+                for doc_name, count in class_top_docs.items():
+                    doc_subset = class_data[class_data['doc_name_clean'] == doc_name]
+                    
+                    # Sumar todos los contadores para este documento
+                    total_counters = 0
+                    counter_details = {}
+                    for col in counter_columns:
+                        if col in doc_subset.columns and doc_subset[col].dtype in ['int64', 'float64']:
+                            col_sum = doc_subset[col].sum()
+                            total_counters += col_sum
+                            if col_sum > 0:
+                                counter_details[col] = int(col_sum)
+                    
+                    doc_stats.append({
+                        'document_name': str(doc_name),
+                        'frequency': int(count),
+                        'percentage_in_classification': round((count / len(class_data)) * 100, 2),
+                        'percentage_in_total': round((count / len(df)) * 100, 2),
+                        'total_counters': int(total_counters),
+                        'counter_details': counter_details,
+                        'average_counters_per_instance': round(total_counters / count, 2) if count > 0 else 0
+                    })
+                
+                top_documents['by_classification'][str(classification)] = {
+                    'classification_total_docs': len(class_data),
+                    'classification_percentage': round((len(class_data) / len(df)) * 100, 2),
+                    'top_documents': doc_stats
+                }
+    
+    return top_documents
 
 def calculate_metrics(df, counter_columns):
     """Calcula todas las métricas del dashboard"""
@@ -103,7 +169,10 @@ def calculate_metrics(df, counter_columns):
         
         metrics['detailed_classifications'] = detailed_classifications
     
-    # 3. Análisis de contadores
+    # 3. Calcular top documentos (NUEVO)
+    metrics['top_documents'] = calculate_top_documents(df, counter_columns)
+    
+    # 4. Análisis de contadores
     counter_stats = []
     for col in counter_columns:
         if col in df.columns and df[col].dtype in ['int64', 'float64']:
@@ -152,7 +221,7 @@ def calculate_metrics(df, counter_columns):
         
         metrics['counter_analysis']['specific_categories'][category] = category_stats
     
-    # 4. Análisis temporal
+    # 5. Análisis temporal
     if 'modif_date' in df.columns:
         df_temporal = df[df['modif_date'].notna()]
         if len(df_temporal) > 0:
@@ -189,7 +258,7 @@ def calculate_metrics(df, counter_columns):
                 'month_distribution': sorted(month_data, key=lambda x: x['month_number'])
             }
     
-    # 5. Análisis de nombres de documentos
+    # 6. Análisis de nombres de documentos
     if 'doc_name_clean' in df.columns:
         name_counts = df['doc_name_clean'].value_counts()
         
@@ -227,7 +296,7 @@ def calculate_metrics(df, counter_columns):
         
         metrics['document_analysis'] = doc_stats
     
-    # 6. Estadísticas generales del dataset
+    # 7. Estadísticas generales del dataset
     metrics['dataset_info'] = {
         'shape': {
             'rows': df.shape[0],
@@ -241,7 +310,7 @@ def calculate_metrics(df, counter_columns):
         }
     }
     
-    # 7. Información de columnas
+    # 8. Información de columnas
     column_info = []
     for col in df.columns:
         col_info = {
@@ -264,7 +333,7 @@ def calculate_metrics(df, counter_columns):
     
     metrics['column_info'] = column_info
     
-    # 8. Muestra de datos (primeras 100 filas para demo)
+    # 9. Muestra de datos (primeras 100 filas para demo)
     sample_data = df.head(100).copy()
     
     # Convertir fechas a string para JSON
@@ -311,6 +380,21 @@ def save_metrics(metrics):
         f.write(f"- Contadores Detectados: {main['counter_columns_detected']}\n")
         if main['date_range']:
             f.write(f"- Rango de Fechas: {main['date_range']['min_date']} - {main['date_range']['max_date']}\n")
+        
+        # TOP DOCUMENTOS GENERALES (NUEVO)
+        f.write("\nTOP 10 DOCUMENTOS GENERALES:\n")
+        if 'top_documents' in metrics and 'general' in metrics['top_documents']:
+            for i, doc in enumerate(metrics['top_documents']['general'], 1):
+                f.write(f"{i}. {doc['document_name']}: {doc['frequency']:,} veces ({doc['percentage']:.1f}%)\n")
+        
+        # TOP DOCUMENTOS POR CLASIFICACIÓN (NUEVO)
+        f.write("\nTOP DOCUMENTOS POR CLASIFICACIÓN:\n")
+        if 'top_documents' in metrics and 'by_classification' in metrics['top_documents']:
+            for classification, data in list(metrics['top_documents']['by_classification'].items())[:5]:
+                f.write(f"\nClasificación '{classification}' ({data['classification_total_docs']:,} docs):\n")
+                for i, doc in enumerate(data['top_documents'][:5], 1):
+                    f.write(f"  {i}. {doc['document_name']}: {doc['frequency']:,} veces\n")
+                    f.write(f"     ({doc['percentage_in_classification']:.1f}% de la clasificación, {doc['total_counters']:,} contadores)\n")
         
         f.write("\nTOP 10 CLASIFICACIONES:\n")
         if 'classification_distribution' in metrics:
@@ -406,6 +490,12 @@ def main():
             print(f"   🔢 Contadores Detectados: {main['counter_columns_detected']}")
             if main['date_range']:
                 print(f"   📅 Rango de Fechas: {main['date_range']['min_date']} - {main['date_range']['max_date']}")
+        
+        # Mostrar vista previa de top documentos
+        if 'top_documents' in metrics:
+            print(f"\n📋 TOP 5 DOCUMENTOS MÁS FRECUENTES:")
+            for i, doc in enumerate(metrics['top_documents']['general'][:5], 1):
+                print(f"   {i}. {doc['document_name']}: {doc['frequency']:,} veces")
         
         return json_file, summary_file
         

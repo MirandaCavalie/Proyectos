@@ -28,73 +28,23 @@ CLASSIFICATION_COLORS = {
     '3.0': '#FF4500'   # Rojo
 }
 
-# Métricas pre-calculadas (basadas en tu archivo JSON)
-PRECALCULATED_METRICS = {
-    "timestamp": "2025-06-13T16:54:41.051340",
-    "total_templates": 1640532,
-    "unique_classifications": 3,
-    "counter_columns_detected": 11,
-    "date_range": {
-        "min_date": "1979-11-30",
-        "max_date": "2098-01-01",
-        "valid_dates_count": 1640532
-    },
-    "classification_distribution": {
-        "3.0": 790017,
-        "1.0": 568832,
-        "2.0": 281683
-    },
-    "detailed_classifications": {
-        "1.0": {"count": 568832, "percentage": 34.7, "total_counters": 0, "unique_docs": 0},
-        "2.0": {"count": 281683, "percentage": 17.2, "total_counters": 0, "unique_docs": 0},
-        "3.0": {"count": 790017, "percentage": 48.1, "total_counters": 0, "unique_docs": 0}
-    },
-    "counter_stats": [
-        {"counter_name": "analysis_total_counters", "clean_name": "Analysis Total", "documents_with_data": 1561140, "percentage": 95.16, "total_sum": 1682645244, "max_value": 6468583, "average": 1025.67},
-        {"counter_name": "pii_personal_name_count", "clean_name": "PII Personal Name", "documents_with_data": 1539598, "percentage": 93.85, "total_sum": 1369715115, "max_value": 4508963, "average": 841.04},
-        {"counter_name": "pii_ced_ecu_count", "clean_name": "PII Cédula Ecuador", "documents_with_data": 672786, "percentage": 41.01, "total_sum": 241174770, "max_value": 1959511, "average": 148.09},
-        {"counter_name": "pii_email_count", "clean_name": "PII Email", "documents_with_data": 408361, "percentage": 24.89, "total_sum": 37132328, "max_value": 223906, "average": 22.8},
-        {"counter_name": "pii_ruc_ecu_count", "clean_name": "PII RUC Ecuador", "documents_with_data": 151994, "percentage": 9.26, "total_sum": 7093122, "max_value": 86666, "average": 4.36},
-        {"counter_name": "cc_visa_count", "clean_name": "Tarjetas Visa", "documents_with_data": 41912, "percentage": 2.55, "total_sum": 10073870, "max_value": 728012, "average": 6.19},
-        {"counter_name": "cc_mastercard_count", "clean_name": "Tarjetas Mastercard", "documents_with_data": 26260, "percentage": 1.6, "total_sum": 4110778, "max_value": 260879, "average": 2.52},
-        {"counter_name": "pii_phone_number_count", "clean_name": "PII Teléfono", "documents_with_data": 12691, "percentage": 0.77, "total_sum": 141629, "max_value": 8495, "average": 0.09},
-        {"counter_name": "pii_address_count", "clean_name": "PII Dirección", "documents_with_data": 4738, "percentage": 0.29, "total_sum": 13348, "max_value": 481, "average": 0.01},
-        {"counter_name": "cc_discover_count", "clean_name": "Tarjetas Discover", "documents_with_data": 2893, "percentage": 0.18, "total_sum": 174702, "max_value": 8463, "average": 0.11},
-        {"counter_name": "cc_diners_club_count", "clean_name": "Tarjetas Diners", "documents_with_data": 1899, "percentage": 0.12, "total_sum": 66826, "max_value": 11626, "average": 0.04}
-    ],
-    "credit_cards": [
-        {"counter_name": "cc_discover_count", "clean_name": "Discover", "total_occurrences": 174702, "documents_with_data": 2893, "percentage": 0.18},
-        {"counter_name": "cc_visa_count", "clean_name": "Visa", "total_occurrences": 10073870, "documents_with_data": 41912, "percentage": 2.55},
-        {"counter_name": "cc_diners_club_count", "clean_name": "Diners Club", "total_occurrences": 66826, "documents_with_data": 1899, "percentage": 0.12},
-        {"counter_name": "cc_mastercard_count", "clean_name": "Mastercard", "total_occurrences": 4110778, "documents_with_data": 26260, "percentage": 1.6}
-    ],
-    "pii_data": [
-        {"counter_name": "pii_address_count", "clean_name": "Direcciones", "total_occurrences": 13348, "documents_with_data": 4738, "percentage": 0.29},
-        {"counter_name": "pii_ruc_ecu_count", "clean_name": "RUC Ecuador", "total_occurrences": 7093122, "documents_with_data": 151994, "percentage": 9.26},
-        {"counter_name": "pii_ced_ecu_count", "clean_name": "Cédulas Ecuador", "total_occurrences": 241174770, "documents_with_data": 672786, "percentage": 41.01},
-        {"counter_name": "pii_phone_number_count", "clean_name": "Teléfonos", "total_occurrences": 141629, "documents_with_data": 12691, "percentage": 0.77},
-        {"counter_name": "pii_personal_name_count", "clean_name": "Nombres Personales", "total_occurrences": 1369715115, "documents_with_data": 1539598, "percentage": 93.85},
-        {"counter_name": "pii_email_count", "clean_name": "Emails", "total_occurrences": 37132328, "documents_with_data": 408361, "percentage": 24.89}
-    ],
-    "temporal_data": {
-        "yearly_totals": {
-            "2019": 66636, "2020": 92258, "2021": 128161, "2022": 150664, 
-            "2023": 192702, "2024": 347215, "2025": 407830
-        }
-    },
-    "top_document_names": [
-        {"document_name": "UNGENERALIZABLE", "frequency": 176136},
-        {"document_name": "rpa signed", "frequency": 46770},
-        {"document_name": "bitacora availability ecu", "frequency": 25123},
-        {"document_name": "tarjeta registro firma", "frequency": 23898},
-        {"document_name": "prc comprobante control", "frequency": 17566},
-        {"document_name": "xxxxxxxx", "frequency": 14613},
-        {"document_name": "oficio nro urr signed", "frequency": 14536},
-        {"document_name": "notice", "frequency": 12316},
-        {"document_name": "ruc", "frequency": 11163},
-        {"document_name": "solicitud servicios electronicos", "frequency": 10394}
-    ]
-}
+# Función para cargar las métricas desde el archivo JSON
+@st.cache_data
+def load_metrics():
+    """Carga los datos de métricas desde el archivo JSON"""
+    json_file = "dashboard_metrics/dashboard_metrics.json"
+    
+    if not os.path.exists(json_file):
+        st.error(f"❌ No se encontró el archivo: {json_file}")
+        return None
+    
+    try:
+        with open(json_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return data
+    except Exception as e:
+        st.error(f"❌ Error al cargar los datos: {str(e)}")
+        return None
 
 def setup_bigquery_credentials():
     """Configura las credenciales de BigQuery de forma segura"""
@@ -158,7 +108,7 @@ def load_sample_data_from_bigquery():
         query = f"""
         SELECT *
         FROM `{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}`
-        LIMIT 1000
+        LIMIT 500000
         """
         
         df = client.query(query).to_dataframe()
@@ -180,14 +130,17 @@ def load_sample_data_from_bigquery():
     except Exception as e:
         return None, str(e)
 
-def create_classification_chart():
+def create_classification_chart(data):
     """Crea gráfico de clasificaciones con colores fijos"""
-    data = PRECALCULATED_METRICS["classification_distribution"]
+    classification_data = data.get('classification_distribution', {}).get('data', {})
+    
+    if not classification_data:
+        return None
     
     # Crear listas ordenadas
-    classifications = list(data.keys())
-    values = list(data.values())
-    colors = [CLASSIFICATION_COLORS[str(c)] for c in classifications]
+    classifications = list(classification_data.keys())
+    values = list(classification_data.values())
+    colors = [CLASSIFICATION_COLORS.get(str(c), '#808080') for c in classifications]
     
     # Crear labels descriptivos
     labels = []
@@ -219,11 +172,14 @@ def create_classification_chart():
     
     return fig
 
-def create_counter_chart():
+def create_counter_chart(data):
     """Crea gráfico de contadores"""
-    data = PRECALCULATED_METRICS["counter_stats"][:10]  # Top 10
+    counter_stats = data.get('counter_analysis', {}).get('general_stats', [])[:10]
     
-    df = pd.DataFrame(data)
+    if not counter_stats:
+        return None
+    
+    df = pd.DataFrame(counter_stats)
     
     fig = px.bar(
         df,
@@ -242,10 +198,14 @@ def create_counter_chart():
     
     return fig
 
-def create_credit_cards_chart():
+def create_credit_cards_chart(data):
     """Crea gráfico específico de tarjetas de crédito"""
-    data = PRECALCULATED_METRICS["credit_cards"]
-    df = pd.DataFrame(data)
+    credit_cards = data.get('counter_analysis', {}).get('specific_categories', {}).get('credit_cards', [])
+    
+    if not credit_cards:
+        return None
+    
+    df = pd.DataFrame(credit_cards)
     
     fig = px.bar(
         df,
@@ -261,10 +221,14 @@ def create_credit_cards_chart():
     fig.update_layout(height=300)
     return fig
 
-def create_pii_chart():
+def create_pii_chart(data):
     """Crea gráfico específico de información personal"""
-    data = PRECALCULATED_METRICS["pii_data"]
-    df = pd.DataFrame(data)
+    pii_data = data.get('counter_analysis', {}).get('specific_categories', {}).get('pii_data', [])
+    
+    if not pii_data:
+        return None
+    
+    df = pd.DataFrame(pii_data)
     
     fig = px.bar(
         df,
@@ -280,18 +244,23 @@ def create_pii_chart():
     fig.update_layout(height=400)
     return fig
 
-def create_temporal_chart():
+def create_temporal_chart(data):
     """Crea gráfico temporal de los últimos años"""
-    data = PRECALCULATED_METRICS["temporal_data"]["yearly_totals"]
+    temporal_data = data.get('temporal_analysis', {}).get('yearly_data', [])
     
-    years = list(data.keys())
-    values = list(data.values())
+    if not temporal_data:
+        return None
+    
+    # Filtrar años válidos
+    df = pd.DataFrame(temporal_data)
+    df = df[(df['year'] >= 2015) & (df['year'] <= 2025)]
     
     fig = px.line(
-        x=years,
-        y=values,
+        df,
+        x='year',
+        y='count',
         title="📈 Evolución Temporal de Templates (Últimos Años)",
-        labels={'x': 'Año', 'y': 'Cantidad de Templates'},
+        labels={'year': 'Año', 'count': 'Cantidad de Templates'},
         markers=True
     )
     
@@ -300,10 +269,15 @@ def create_temporal_chart():
     
     return fig
 
-def create_document_names_chart():
+def create_document_names_chart(data):
     """Crea gráfico de nombres de documentos más comunes"""
-    data = PRECALCULATED_METRICS["top_document_names"]
-    df = pd.DataFrame(data)
+    doc_analysis = data.get('document_analysis', {})
+    top_names = doc_analysis.get('top_names', [])
+    
+    if not top_names:
+        return None
+    
+    df = pd.DataFrame(top_names[:10])  # Top 10
     
     fig = px.bar(
         df,
@@ -324,7 +298,48 @@ def create_document_names_chart():
     
     return fig
 
+def create_top_documents_by_classification_chart(data, classification):
+    """Crea gráfico de top documentos para una clasificación específica"""
+    top_docs = data.get('top_documents', {}).get('by_classification', {})
+    
+    if str(classification) not in top_docs:
+        return None
+    
+    class_data = top_docs[str(classification)]
+    top_documents = class_data.get('top_documents', [])[:10]  # Top 10
+    
+    if not top_documents:
+        return None
+    
+    df = pd.DataFrame(top_documents)
+    
+    # Usar el color correspondiente a la clasificación
+    color = CLASSIFICATION_COLORS.get(str(classification), '#808080')
+    
+    fig = px.bar(
+        df,
+        x='frequency',
+        y='document_name',
+        orientation='h',
+        title=f"📋 Top Documentos - Clasificación {classification}",
+        labels={'frequency': 'Frecuencia', 'document_name': 'Nombre del Documento'},
+        color_discrete_sequence=[color]
+    )
+    
+    fig.update_layout(
+        height=400,
+        showlegend=False,
+        yaxis={'categoryorder': 'total ascending'}
+    )
+    
+    return fig
+
 def main():
+    # Cargar datos
+    data = load_metrics()
+    if data is None:
+        st.stop()
+    
     st.title("📊 Dashboard de Análisis de Templates")
     st.markdown("---")
     
@@ -340,81 +355,182 @@ def main():
     
     if mode == "📊 Vista Rápida (Métricas Pre-calculadas)":
         st.sidebar.success("✅ Usando métricas pre-calculadas (Carga Instantánea)")
-        st.sidebar.info("💡 Los datos fueron calculados el 13 de Junio de 2025 a las 16:54")
+        timestamp = data.get('timestamp', 'N/A')
+        if timestamp != 'N/A':
+            st.sidebar.info(f"💡 Datos actualizados: {timestamp[:10]} {timestamp[11:19]}")
         
         # Métricas principales
         st.header("📈 Métricas Principales")
         
+        main_metrics = data.get('main_metrics', {})
+        
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
-            st.metric("📄 Total Templates", f"{PRECALCULATED_METRICS['total_templates']:,}")
+            st.metric("📄 Total Templates", f"{main_metrics.get('total_templates', 0):,}")
         
         with col2:
-            st.metric("🏷️ Clasificaciones", PRECALCULATED_METRICS['unique_classifications'])
+            st.metric("🏷️ Clasificaciones", main_metrics.get('unique_classifications', 0))
         
         with col3:
-            st.metric("🔢 Contadores", PRECALCULATED_METRICS['counter_columns_detected'])
+            st.metric("🔢 Contadores", main_metrics.get('counter_columns_detected', 0))
         
         with col4:
-            st.metric("📅 Período", f"{PRECALCULATED_METRICS['date_range']['valid_dates_count']:,} fechas")
+            date_range = main_metrics.get('date_range', {})
+            st.metric("📅 Docs con Fecha", f"{date_range.get('valid_dates_count', 0):,}")
         
         st.markdown("---")
         
         # Tabs para las diferentes visualizaciones
-        tab1, tab2, tab3, tab4 = st.tabs([
+        tab1, tab2, tab3, tab4, tab5 = st.tabs([
             "📊 Clasificaciones", 
+            "📋 Top Documentos",
             "🔢 Contadores", 
             "📈 Análisis Temporal", 
-            "📄 Documentos"
+            "📄 Documentos Generales"
         ])
         
         with tab1:
             st.header("📋 Análisis por Clasificación de Seguridad")
             
             # Gráfico principal
-            fig_class = create_classification_chart()
-            st.plotly_chart(fig_class, use_container_width=True)
+            fig_class = create_classification_chart(data)
+            if fig_class:
+                st.plotly_chart(fig_class, use_container_width=True)
             
             # Análisis detallado
             st.subheader("🔍 Análisis Detallado por Clasificación")
             
+            classification_data = data.get('classification_distribution', {}).get('data', {})
+            total_docs = sum(classification_data.values()) if classification_data else 1
+            
             col1, col2, col3 = st.columns(3)
             
-            with col1:
-                st.markdown("### 🟡 Clasificación 1 - Público")
-                st.metric("📄 Templates", f"{PRECALCULATED_METRICS['detailed_classifications']['1.0']['count']:,}")
-                st.metric("📊 Porcentaje", f"{PRECALCULATED_METRICS['detailed_classifications']['1.0']['percentage']:.1f}%")
-                st.markdown("**Descripción:** Información de acceso público sin restricciones")
+            # Clasificación 1.0
+            if '1.0' in classification_data:
+                with col1:
+                    st.markdown("### 🟡 Clasificación 1 - Público")
+                    count_1 = classification_data['1.0']
+                    percentage_1 = (count_1 / total_docs) * 100
+                    st.metric("📄 Templates", f"{count_1:,}")
+                    st.metric("📊 Porcentaje", f"{percentage_1:.1f}%")
+                    st.markdown("**Descripción:** Información de acceso público sin restricciones")
             
-            with col2:
-                st.markdown("### 🟠 Clasificación 2 - Confidencial")
-                st.metric("📄 Templates", f"{PRECALCULATED_METRICS['detailed_classifications']['2.0']['count']:,}")
-                st.metric("📊 Porcentaje", f"{PRECALCULATED_METRICS['detailed_classifications']['2.0']['percentage']:.1f}%")
-                st.markdown("**Descripción:** Información confidencial con acceso restringido")
+            # Clasificación 2.0
+            if '2.0' in classification_data:
+                with col2:
+                    st.markdown("### 🟠 Clasificación 2 - Confidencial")
+                    count_2 = classification_data['2.0']
+                    percentage_2 = (count_2 / total_docs) * 100
+                    st.metric("📄 Templates", f"{count_2:,}")
+                    st.metric("📊 Porcentaje", f"{percentage_2:.1f}%")
+                    st.markdown("**Descripción:** Información confidencial con acceso restringido")
             
-            with col3:
-                st.markdown("### 🔴 Clasificación 3 - Reservado")
-                st.metric("📄 Templates", f"{PRECALCULATED_METRICS['detailed_classifications']['3.0']['count']:,}")
-                st.metric("📊 Porcentaje", f"{PRECALCULATED_METRICS['detailed_classifications']['3.0']['percentage']:.1f}%")
-                st.markdown("**Descripción:** Información altamente sensible y reservada")
+            # Clasificación 3.0
+            if '3.0' in classification_data:
+                with col3:
+                    st.markdown("### 🔴 Clasificación 3 - Reservado")
+                    count_3 = classification_data['3.0']
+                    percentage_3 = (count_3 / total_docs) * 100
+                    st.metric("📄 Templates", f"{count_3:,}")
+                    st.metric("📊 Porcentaje", f"{percentage_3:.1f}%")
+                    st.markdown("**Descripción:** Información altamente sensible y reservada")
         
         with tab2:
+            st.header("📋 Top Documentos por Clasificación")
+            
+            # Verificar si tenemos datos de top documentos
+            top_docs = data.get('top_documents', {})
+            by_classification = top_docs.get('by_classification', {})
+            
+            if by_classification:
+                # Selector de clasificación
+                available_classifications = list(by_classification.keys())
+                selected_classification = st.selectbox(
+                    "Selecciona una clasificación:",
+                    available_classifications,
+                    format_func=lambda x: f"Clasificación {x} ({'Público' if x=='1.0' else 'Confidencial' if x=='2.0' else 'Reservado'})"
+                )
+                
+                if selected_classification:
+                    class_data = by_classification[selected_classification]
+                    
+                    # Métricas de la clasificación
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.metric("📄 Total Documentos", f"{class_data.get('classification_total_docs', 0):,}")
+                    with col2:
+                        st.metric("📊 % del Total", f"{class_data.get('classification_percentage', 0):.1f}%")
+                    with col3:
+                        top_documents = class_data.get('top_documents', [])
+                        if top_documents:
+                            total_counters = sum([doc.get('total_counters', 0) for doc in top_documents[:5]])
+                            st.metric("🔢 Contadores (Top 5)", f"{total_counters:,}")
+                    
+                    # Gráfico de top documentos para la clasificación
+                    fig_top_docs = create_top_documents_by_classification_chart(data, selected_classification)
+                    if fig_top_docs:
+                        st.plotly_chart(fig_top_docs, use_container_width=True)
+                    
+                    # Tabla detallada
+                    if top_documents:
+                        st.subheader("📋 Detalle de Top Documentos")
+                        
+                        # Preparar datos para la tabla
+                        table_data = []
+                        for doc in top_documents[:10]:
+                            table_data.append({
+                                'Documento': doc.get('document_name', ''),
+                                'Frecuencia': f"{doc.get('frequency', 0):,}",
+                                '% en Clasificación': f"{doc.get('percentage_in_classification', 0):.2f}%",
+                                '% del Total': f"{doc.get('percentage_in_total', 0):.2f}%",
+                                'Total Contadores': f"{doc.get('total_counters', 0):,}",
+                                'Promedio Contadores': f"{doc.get('average_counters_per_instance', 0):.2f}"
+                            })
+                        
+                        df_table = pd.DataFrame(table_data)
+                        st.dataframe(df_table, hide_index=True, use_container_width=True)
+            else:
+                st.info("📊 Los datos de top documentos por clasificación no están disponibles.")
+                
+                # Mostrar top documentos generales como alternativa
+                general_docs = top_docs.get('general', [])
+                if general_docs:
+                    st.subheader("🏆 Top Documentos Generales")
+                    
+                    df_general = pd.DataFrame(general_docs[:10])
+                    
+                    fig_general = px.bar(
+                        df_general,
+                        x='frequency',
+                        y='document_name',
+                        orientation='h',
+                        title="Top 10 Documentos Más Frecuentes",
+                        color='frequency',
+                        color_continuous_scale='viridis'
+                    )
+                    fig_general.update_layout(yaxis={'categoryorder': 'total ascending'})
+                    st.plotly_chart(fig_general, use_container_width=True)
+        
+        with tab3:
             st.header("🔢 Análisis de Contadores de Datos Sensibles")
             
             # Gráfico general
-            fig_counters = create_counter_chart()
-            st.plotly_chart(fig_counters, use_container_width=True)
+            fig_counters = create_counter_chart(data)
+            if fig_counters:
+                st.plotly_chart(fig_counters, use_container_width=True)
             
             col1, col2 = st.columns(2)
             
             with col1:
                 st.subheader("💳 Tarjetas de Crédito")
-                fig_cc = create_credit_cards_chart()
-                st.plotly_chart(fig_cc, use_container_width=True)
+                fig_cc = create_credit_cards_chart(data)
+                if fig_cc:
+                    st.plotly_chart(fig_cc, use_container_width=True)
                 
                 # Métricas de tarjetas
-                for card in PRECALCULATED_METRICS["credit_cards"]:
+                credit_cards = data.get('counter_analysis', {}).get('specific_categories', {}).get('credit_cards', [])
+                for card in credit_cards:
                     st.metric(
                         f"🔢 {card['clean_name']}",
                         f"{card['total_occurrences']:,}",
@@ -423,11 +539,13 @@ def main():
             
             with col2:
                 st.subheader("🔒 Información Personal (PII)")
-                fig_pii = create_pii_chart()
-                st.plotly_chart(fig_pii, use_container_width=True)
+                fig_pii = create_pii_chart(data)
+                if fig_pii:
+                    st.plotly_chart(fig_pii, use_container_width=True)
                 
                 # Top 3 PII
-                top_pii = sorted(PRECALCULATED_METRICS["pii_data"], key=lambda x: x['percentage'], reverse=True)[:3]
+                pii_data = data.get('counter_analysis', {}).get('specific_categories', {}).get('pii_data', [])
+                top_pii = sorted(pii_data, key=lambda x: x['percentage'], reverse=True)[:3]
                 for pii in top_pii:
                     st.metric(
                         f"🔒 {pii['clean_name']}",
@@ -435,50 +553,69 @@ def main():
                         f"{pii['documents_with_data']:,} docs ({pii['percentage']:.1f}%)"
                     )
         
-        with tab3:
+        with tab4:
             st.header("📈 Análisis Temporal")
             
-            fig_temporal = create_temporal_chart()
-            st.plotly_chart(fig_temporal, use_container_width=True)
+            fig_temporal = create_temporal_chart(data)
+            if fig_temporal:
+                st.plotly_chart(fig_temporal, use_container_width=True)
             
             # Estadísticas temporales
-            col1, col2, col3 = st.columns(3)
-            
-            yearly_data = PRECALCULATED_METRICS["temporal_data"]["yearly_totals"]
-            years = list(yearly_data.keys())
-            
-            with col1:
-                st.metric("📊 Año con Más Templates", "2025", f"{yearly_data['2025']:,} templates")
-            
-            with col2:
-                # Crecimiento entre 2024 y 2025
-                growth = ((yearly_data['2025'] - yearly_data['2024']) / yearly_data['2024']) * 100
-                st.metric("📈 Crecimiento 2024-2025", f"{growth:.1f}%", f"+{yearly_data['2025'] - yearly_data['2024']:,}")
-            
-            with col3:
-                # Promedio últimos 3 años
-                recent_avg = (yearly_data['2023'] + yearly_data['2024'] + yearly_data['2025']) / 3
-                st.metric("📊 Promedio Últimos 3 Años", f"{recent_avg:,.0f}")
+            temporal_data = data.get('temporal_analysis', {}).get('yearly_data', [])
+            if temporal_data:
+                col1, col2, col3 = st.columns(3)
+                
+                # Encontrar año con más templates
+                max_year_data = max(temporal_data, key=lambda x: x['count'])
+                
+                with col1:
+                    st.metric("📊 Año con Más Templates", 
+                             str(max_year_data['year']), 
+                             f"{max_year_data['count']:,} templates")
+                
+                with col2:
+                    # Crecimiento reciente
+                    recent_years = [d for d in temporal_data if d['year'] >= 2024]
+                    if len(recent_years) >= 2:
+                        recent_years.sort(key=lambda x: x['year'])
+                        growth = ((recent_years[-1]['count'] - recent_years[-2]['count']) / recent_years[-2]['count']) * 100
+                        st.metric("📈 Crecimiento Reciente", 
+                                 f"{growth:.1f}%", 
+                                 f"+{recent_years[-1]['count'] - recent_years[-2]['count']:,}")
+                
+                with col3:
+                    # Promedio últimos 3 años
+                    recent_3_years = [d for d in temporal_data if d['year'] >= 2023]
+                    if recent_3_years:
+                        avg = sum(d['count'] for d in recent_3_years) / len(recent_3_years)
+                        st.metric("📊 Promedio Últimos Años", f"{avg:,.0f}")
         
-        with tab4:
+        with tab5:
             st.header("📄 Análisis de Nombres de Documentos")
             
-            fig_names = create_document_names_chart()
-            st.plotly_chart(fig_names, use_container_width=True)
+            fig_names = create_document_names_chart(data)
+            if fig_names:
+                st.plotly_chart(fig_names, use_container_width=True)
             
             # Estadísticas de documentos
+            doc_analysis = data.get('document_analysis', {})
+            
             col1, col2, col3 = st.columns(3)
             
             with col1:
-                st.metric("📄 Total Documentos", f"{PRECALCULATED_METRICS['total_templates']:,}")
+                st.metric("📄 Total Documentos", f"{doc_analysis.get('total_documents', 0):,}")
             
             with col2:
-                st.metric("📝 Nombres Únicos", "425,544")
+                st.metric("📝 Nombres Únicos", f"{doc_analysis.get('unique_names', 0):,}")
             
             with col3:
                 # Documento más común
-                top_doc = PRECALCULATED_METRICS["top_document_names"][0]
-                st.metric("🏆 Más Común", top_doc["document_name"][:20] + "...", f"{top_doc['frequency']:,}")
+                top_names = doc_analysis.get('top_names', [])
+                if top_names:
+                    top_doc = top_names[0]
+                    doc_name = top_doc["document_name"]
+                    display_name = doc_name[:20] + "..." if len(doc_name) > 20 else doc_name
+                    st.metric("🏆 Más Común", display_name, f"{top_doc['frequency']:,}")
     
     else:  # Modo exploración en tiempo real
         st.sidebar.warning("⚠️ Modo en tiempo real - Requiere conexión a BigQuery")
@@ -519,7 +656,9 @@ def main():
             sample_df = st.session_state['sample_df']
             
             st.header("🔍 Exploración de Datos en Tiempo Real")
-            st.info(f"📊 **Muestra actual:** {len(sample_df):,} registros de {PRECALCULATED_METRICS['total_templates']:,} totales")
+            main_metrics = data.get('main_metrics', {})
+            total_templates = main_metrics.get('total_templates', 0)
+            st.info(f"📊 **Muestra actual:** {len(sample_df):,} registros de {total_templates:,} totales")
             
             # Filtros interactivos
             col1, col2 = st.columns(2)
@@ -597,7 +736,9 @@ def main():
         st.markdown("*📊 Dashboard optimizado con métricas pre-calculadas*")
     
     with col2:
-        st.markdown(f"*⚡ Última actualización: {PRECALCULATED_METRICS['timestamp'][:10]}*")
+        timestamp = data.get('timestamp', 'N/A')
+        if timestamp != 'N/A':
+            st.markdown(f"*⚡ Última actualización: {timestamp[:10]}*")
     
     with col3:
         st.markdown("*🚀 Creado con Streamlit y BigQuery*")
