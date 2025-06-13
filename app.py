@@ -641,7 +641,7 @@ def main():
             st.sidebar.success("✅ Credenciales configuradas")
         
         # Botón para cargar muestra
-        if st.sidebar.button("🔄 Cargar Muestra de Datos (1,000 registros)", type="primary"):
+        if st.sidebar.button("🔄 Cargar Muestra de Datos (500,000 registros)", type="primary"):
             with st.spinner("🔄 Cargando muestra desde BigQuery..."):
                 sample_df, error = load_sample_data_from_bigquery()
                 
