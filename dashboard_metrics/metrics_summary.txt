@@ -1,0 +1,59 @@
+=== RESUMEN DE MÉTRICAS DEL DASHBOARD ===
+Generado: 2025-06-13T16:54:41.051340
+Fuente: BP_Templates_bigquery_ready.parquet
+
+MÉTRICAS PRINCIPALES:
+- Total Templates: 1,640,532
+- Clasificaciones Únicas: 3
+- Contadores Detectados: 11
+- Rango de Fechas: 1979-11-30 - 2098-01-01
+
+TOP 10 CLASIFICACIONES:
+1. 3.0: 790,017 templates
+2. 1.0: 568,832 templates
+3. 2.0: 281,683 templates
+
+TOP 10 CONTADORES:
+1. Analysis Totalers: 1,561,140 docs (95.2%)
+2. Pii Personal Name: 1,539,598 docs (93.8%)
+3. Pii Ced Ecu: 672,786 docs (41.0%)
+4. Pii Email: 408,361 docs (24.9%)
+5. Pii Ruc Ecu: 151,994 docs (9.3%)
+6. Cc Visa: 41,912 docs (2.5%)
+7. Cc Mastercard: 26,260 docs (1.6%)
+8. Pii Phone Number: 12,691 docs (0.8%)
+9. Pii Address: 4,738 docs (0.3%)
+10. Cc Discover: 2,893 docs (0.2%)
+
+CONTADORES DE TARJETAS DE CRÉDITO:
+- Cc Discover: 174,702 ocurrencias en 2,893 docs
+- Cc Visa: 10,073,870 ocurrencias en 41,912 docs
+- Cc Diners Club: 66,826 ocurrencias en 1,899 docs
+- Cc Mastercard: 4,110,778 ocurrencias en 26,260 docs
+
+CONTADORES DE INFORMACIÓN PERSONAL (PII):
+- Pii Address: 13,348 ocurrencias en 4,738 docs
+- Pii Ruc Ecu: 7,093,122 ocurrencias en 151,994 docs
+- Pii Ced Ecu: 241,174,770 ocurrencias en 672,786 docs
+- Pii Phone Number: 141,629 ocurrencias en 12,691 docs
+- Pii Personal Name: 1,369,715,115 ocurrencias en 1,539,598 docs
+- Pii Email: 37,132,328 ocurrencias en 408,361 docs
+
+ANÁLISIS DETALLADO POR CLASIFICACIÓN:
+
+INFORMACIÓN DEL DATASET:
+- Dimensiones: 1,640,532 filas × 44 columnas
+- Memoria: 2978.73 MB
+- Valores nulos: 119,350
+
+ANÁLISIS TEMPORAL:
+- Distribución por año:
+  2022: 150,664 templates
+  2023: 192,702 templates
+  2024: 347,215 templates
+  2025: 407,830 templates
+  2098: 1 templates
+
+ANÁLISIS DE DOCUMENTOS:
+- Total documentos: 1,640,532
+- Nombres únicos: 425,544
