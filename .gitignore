@@ -2,8 +2,7 @@
 *.json
 .streamlit/secrets.toml
 kriptos-4624e10fab77.json
-dashboard_metrics/dashboard_metrics.json
-dashboard_metrics/metrics_summary.txt
+bp_templates_bq.parquet
 
 __pycache__/
 *.py[cod]
