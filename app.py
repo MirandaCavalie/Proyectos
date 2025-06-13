@@ -7,6 +7,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import re
 import os
+import json
 
 # Configuración de la página
 st.set_page_config(
@@ -16,17 +17,58 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Configuración de credenciales
-CREDENTIALS_PATH = r"C:\Users\M.CavalieG\OneDrive - Universidad del Pacífico\Documents\Kriptos\Trabajo\Proyectos\kriptos-4624e10fab77.json"
-
 # Configuración de BigQuery
 PROJECT_ID = "kriptos"
 DATASET_ID = "kriptos_data"
 TABLE_ID = "template_data"
 
-# Configurar credenciales si el archivo existe
-if os.path.exists(CREDENTIALS_PATH):
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = CREDENTIALS_PATH
+def setup_bigquery_credentials():
+    """
+    Configura las credenciales de BigQuery de forma segura
+    """
+    try:
+        # Opción 1: Usar Streamlit Secrets (recomendado para Streamlit Cloud)
+        if hasattr(st, 'secrets') and 'gcp_service_account' in st.secrets:
+            from google.oauth2 import service_account
+            credentials = service_account.Credentials.from_service_account_info(
+                st.secrets["gcp_service_account"]
+            )
+            return credentials, None
+        
+        # Opción 2: Variables de entorno
+        elif all(key in os.environ for key in ['GCP_PROJECT_ID', 'GCP_PRIVATE_KEY', 'GCP_CLIENT_EMAIL']):
+            from google.oauth2 import service_account
+            
+            credentials_info = {
+                "type": os.getenv("GCP_TYPE", "service_account"),
+                "project_id": os.getenv("GCP_PROJECT_ID"),
+                "private_key_id": os.getenv("GCP_PRIVATE_KEY_ID"),
+                "private_key": os.getenv("GCP_PRIVATE_KEY").replace('\\n', '\n'),
+                "client_email": os.getenv("GCP_CLIENT_EMAIL"),
+                "client_id": os.getenv("GCP_CLIENT_ID"),
+                "auth_uri": os.getenv("GCP_AUTH_URI", "https://accounts.google.com/o/oauth2/auth"),
+                "token_uri": os.getenv("GCP_TOKEN_URI", "https://oauth2.googleapis.com/token"),
+                "auth_provider_x509_cert_url": os.getenv("GCP_AUTH_PROVIDER_X509_CERT_URL", "https://www.googleapis.com/oauth2/v1/certs"),
+                "client_x509_cert_url": os.getenv("GCP_CLIENT_X509_CERT_URL")
+            }
+            
+            # Remover campos None
+            credentials_info = {k: v for k, v in credentials_info.items() if v is not None}
+            
+            credentials = service_account.Credentials.from_service_account_info(credentials_info)
+            return credentials, None
+        
+        # Opción 3: Archivo local (solo para desarrollo)
+        else:
+            local_credentials_path = "./kriptos-credentials.json"  # Cambiado para ser relativo
+            if os.path.exists(local_credentials_path):
+                os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = local_credentials_path
+                return None, None
+            else:
+                return None, "No se encontraron credenciales. Configura st.secrets o variables de entorno."
+    
+    except Exception as e:
+        return None, f"Error configurando credenciales: {str(e)}"
 
 # Importar BigQuery
 try:
@@ -38,24 +80,26 @@ except ImportError as e:
 @st.cache_data(ttl=600)  # Cache por 10 minutos
 def load_data_from_bigquery():
     """
-    Carga datos desde BigQuery con credenciales configuradas
+    Carga datos desde BigQuery con credenciales configuradas de forma segura
     """
     if not BIGQUERY_AVAILABLE:
         return None, "BigQuery no está instalado"
     
-    if not os.path.exists(CREDENTIALS_PATH):
-        return None, f"Archivo de credenciales no encontrado: {CREDENTIALS_PATH}"
+    # Configurar credenciales
+    credentials, error = setup_bigquery_credentials()
+    if error:
+        return None, error
     
     try:
-        # Configurar credenciales explícitamente
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = CREDENTIALS_PATH
-        
-        client = bigquery.Client(project=PROJECT_ID)
+        # Crear cliente de BigQuery
+        if credentials:
+            client = bigquery.Client(project=PROJECT_ID, credentials=credentials)
+        else:
+            client = bigquery.Client(project=PROJECT_ID)  # Usa credenciales del entorno
         
         query = f"""
         SELECT *
         FROM `{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}`
-        LIMIT 1000000
         """
         
         df = client.query(query).to_dataframe()
@@ -334,12 +378,20 @@ def main():
     st.sidebar.markdown("### Conexión a BigQuery")
     st.sidebar.info(f"**Proyecto:** {PROJECT_ID}\n**Dataset:** {DATASET_ID}\n**Tabla:** {TABLE_ID}")
     
-    # Verificar configuración
-    if os.path.exists(CREDENTIALS_PATH):
-        st.sidebar.success("✅ Credenciales configuradas")
-    else:
-        st.sidebar.error("❌ Archivo de credenciales no encontrado")
+    # Verificar configuración de credenciales
+    credentials, cred_error = setup_bigquery_credentials()
+    
+    if cred_error:
+        st.sidebar.error(f"❌ {cred_error}")
+        st.sidebar.markdown("""
+        **Para configurar credenciales:**
+        1. **Streamlit Cloud:** Usa st.secrets
+        2. **Local:** Variables de entorno o archivo JSON
+        3. **Otros:** Variables de entorno
+        """)
         st.sidebar.stop()
+    else:
+        st.sidebar.success("✅ Credenciales configuradas")
     
     if BIGQUERY_AVAILABLE:
         st.sidebar.success("✅ BigQuery disponible")
