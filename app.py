@@ -100,6 +100,7 @@ def load_data_from_bigquery():
         query = f"""
         SELECT *
         FROM `{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}`
+        LIMIT 1000000
         """
         
         df = client.query(query).to_dataframe()
@@ -389,7 +390,7 @@ def main():
         2. **Local:** Variables de entorno o archivo JSON
         3. **Otros:** Variables de entorno
         """)
-        st.sidebar.stop()
+        st.stop()
     else:
         st.sidebar.success("✅ Credenciales configuradas")
     
@@ -397,7 +398,7 @@ def main():
         st.sidebar.success("✅ BigQuery disponible")
     else:
         st.sidebar.error("❌ BigQuery no disponible")
-        st.sidebar.stop()
+        st.stop()
     
     # Botón para cargar datos
     if st.sidebar.button("🔄 Cargar datos desde BigQuery"):
