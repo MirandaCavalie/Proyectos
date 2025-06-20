@@ -1,0 +1,528 @@
+{
+  "fecha_generacion": "2025-06-20 02:30:44",
+  "resumen_general": {
+    "total_documentos_analizados": 8142794,
+    "total_ambientes": 4,
+    "fecha_min": "2024-06-20",
+    "fecha_max": "2025-06-19"
+  },
+  "resultados_6_meses": {
+    "periodo": "Últimos 6 meses",
+    "dias": 180,
+    "fecha_limite": "2024-12-22",
+    "total_documentos": 4010209,
+    "analisis_por_ambiente": {
+      "onedrive": {
+        "total_modificaciones": 1561598,
+        "documentos_unicos": 495033,
+        "usuarios_activos": 8082,
+        "areas_activas": 690,
+        "porcentaje_del_total": 38.94,
+        "top_documentos": {
+          "rpa signed": "32690",
+          "xxxxxxxx": "27901",
+          "iva": "17174",
+          "oficio nro urr signed": "14773",
+          "cedula": "11027"
+        },
+        "top_areas": {
+          "REGION COSTA": "172531",
+          "REGION NORTE": "140059",
+          "8628": "67743",
+          "REGION CENTRO": "57172",
+          "FABRICA OPERACIONES": "54713"
+        },
+        "top_usuarios": {
+          "387dc32d-5ec9-4602-95a5-cd45ad820e7a": "46622",
+          "243463fe-7139-4577-a47b-202bf87e904e": "40723",
+          "2c83c138-7169-4e36-aaff-81c14f1929f5": "33619",
+          "b6ce2382-55fd-4d1a-9498-d5ab37772636": "17343",
+          "aaae59e4-253f-4d32-acb0-e1491d9ee827": "13466"
+        }
+      },
+      "windows": {
+        "total_modificaciones": 2107481,
+        "documentos_unicos": 394090,
+        "usuarios_activos": 7928,
+        "areas_activas": 374,
+        "porcentaje_del_total": 52.55,
+        "top_documentos": {
+          "log": "121642",
+          "tarjeta registro firma": "69123",
+          "filtertrie intermediate": "49245",
+          "xxxxxxxx": "47460",
+          "uihistory log": "40505"
+        },
+        "top_areas": {
+          "EXTERNA": "322325",
+          "POR REVISAR AREA": "248431",
+          "REGION COSTA": "143444",
+          "BANCA RELACIONAL": "140901",
+          "REGION NORTE": "128348"
+        },
+        "top_usuarios": {
+          "188027b1-2f69-4cad-95fe-b73d07b66232": "13941",
+          "25f4f9d0-767e-4db2-ae27-06c835a0b585": "10604",
+          "620da055-9060-4181-8d31-a4236444de4c": "10276",
+          "abbb9eee-ba3c-46e9-8356-a6d1854ba3b1": "10137",
+          "9aace368-e388-484a-8274-7d16e92ba52c": "9309"
+        }
+      },
+      "sharepoint": {
+        "total_modificaciones": 341122,
+        "documentos_unicos": 134173,
+        "usuarios_activos": 4447,
+        "areas_activas": 543,
+        "porcentaje_del_total": 8.51,
+        "top_documentos": {
+          "uac": "12425",
+          "factura": "4274",
+          "cierre caso": "3662",
+          "ruc": "2357",
+          "declaracion": "2330"
+        },
+        "top_areas": {
+          "PASANTE": "55985",
+          "REINGENIERIA DE PROCESOS": "14585",
+          "SERVICIO AL CLIENTE": "14548",
+          "ANALISIS Y MONITOREO": "10448",
+          "POLITICAS Y RELACIONES REGULATORIAS": "9131"
+        },
+        "top_usuarios": {
+          "9bda72aa-f8e2-4294-aba0-b71bfdce06d2": "43444",
+          "72914bf7-759a-4b40-beb6-75b093277965": "13180",
+          "cba0bd52-b043-4268-8735-d8b1c14be956": "8855",
+          "ba6f22f9-2a1a-4312-ad86-a0a6136312b1": "5902",
+          "9fa6c440-34c9-47e1-bd8c-b6a296003af5": "5771"
+        }
+      },
+      "fileserver": {
+        "total_modificaciones": 8,
+        "documentos_unicos": 4,
+        "usuarios_activos": 2,
+        "areas_activas": 1,
+        "porcentaje_del_total": 0.0,
+        "top_documentos": {
+          "instalacion": "2",
+          "jvm hprof": "2",
+          "license": "2",
+          "xusage": "2"
+        },
+        "top_areas": {
+          "SERVIDORES FTP TEST": "8"
+        },
+        "top_usuarios": {
+          "8f6772a5-b088-4ecf-b6f6-2f32cd3e3f45": "7",
+          "f9398c4c-d25e-42c2-96ed-afebc6f8cf9c": "1"
+        }
+      }
+    }
+  },
+  "resultados_12_meses": {
+    "periodo": "Últimos 12 meses",
+    "dias": 365,
+    "fecha_limite": "2024-06-20",
+    "total_documentos": 8142164,
+    "analisis_por_ambiente": {
+      "windows": {
+        "total_modificaciones": 4471865,
+        "documentos_unicos": 844580,
+        "usuarios_activos": 7975,
+        "areas_activas": 376,
+        "porcentaje_del_total": 54.92,
+        "top_documentos": {
+          "log": "195675",
+          "tarjeta registro firma": "149130",
+          "xxxxxxxx": "103866",
+          "solicitud servicios electronicos": "56058",
+          "filtertrie intermediate": "51979"
+        },
+        "top_areas": {
+          "EXTERNA": "589609",
+          "POR REVISAR AREA": "464813",
+          "REGION COSTA": "341563",
+          "REGION NORTE": "299446",
+          "BANCO PICHINCHA C.A.": "245142"
+        },
+        "top_usuarios": {
+          "871e46f4-0b20-44a2-8ddb-7b9a8732bb08": "40233",
+          "96b7a852-7763-4aff-91e8-65638a95c2f3": "36394",
+          "1ac6a972-72e5-4aa4-9c6d-de8c9b2b4ec3": "29514",
+          "a1a5cec6-9cec-4c0e-aa96-7582d8af8eea": "22097",
+          "620da055-9060-4181-8d31-a4236444de4c": "16593"
+        }
+      },
+      "onedrive": {
+        "total_modificaciones": 3184658,
+        "documentos_unicos": 973905,
+        "usuarios_activos": 8359,
+        "areas_activas": 694,
+        "porcentaje_del_total": 39.11,
+        "top_documentos": {
+          "rpa signed": "54138",
+          "xxxxxxxx": "45041",
+          "iva": "33018",
+          "cedula": "22115",
+          "oficio nro urr signed": "20922"
+        },
+        "top_areas": {
+          "REGION COSTA": "352539",
+          "REGION NORTE": "275994",
+          "FABRICA OPERACIONES": "144163",
+          "REGION CENTRO": "121575",
+          "COMERCIAL AUTOMOTRIZ": "109009"
+        },
+        "top_usuarios": {
+          "f1fb74e9-24db-4fc3-afe0-7e96397b39e5": "72310",
+          "387dc32d-5ec9-4602-95a5-cd45ad820e7a": "70939",
+          "243463fe-7139-4577-a47b-202bf87e904e": "47877",
+          "2c83c138-7169-4e36-aaff-81c14f1929f5": "33619",
+          "aaae59e4-253f-4d32-acb0-e1491d9ee827": "29025"
+        }
+      },
+      "sharepoint": {
+        "total_modificaciones": 484746,
+        "documentos_unicos": 186677,
+        "usuarios_activos": 5461,
+        "areas_activas": 577,
+        "porcentaje_del_total": 5.95,
+        "top_documentos": {
+          "uac": "14382",
+          "factura": "5326",
+          "cierre caso": "3665",
+          "autorizacion tratamiento datos personales": "3478",
+          "ruc": "3021"
+        },
+        "top_areas": {
+          "PASANTE": "59730",
+          "SERVICIO AL CLIENTE": "17807",
+          "REINGENIERIA DE PROCESOS": "15879",
+          "POR REVISAR AREA": "14087",
+          "RECLAMOS Y REQUERIMIENTOS": "12592"
+        },
+        "top_usuarios": {
+          "9bda72aa-f8e2-4294-aba0-b71bfdce06d2": "43444",
+          "72914bf7-759a-4b40-beb6-75b093277965": "13187",
+          "cba0bd52-b043-4268-8735-d8b1c14be956": "9360",
+          "acfd6118-63b9-41c8-b94c-7d3a9de8a7fd": "9211",
+          "c2b0ac55-689c-44bb-a522-03274b9d1897": "6890"
+        }
+      },
+      "fileserver": {
+        "total_modificaciones": 895,
+        "documentos_unicos": 163,
+        "usuarios_activos": 3,
+        "areas_activas": 1,
+        "porcentaje_del_total": 0.01,
+        "top_documentos": {
+          "cth": "56",
+          "pruebaftpborrar": "37",
+          "fltrep ser expirado": "33",
+          "cuadre reposting": "33",
+          "etl obligacion financiera detalle": "30"
+        },
+        "top_areas": {
+          "SERVIDORES FTP TEST": "895"
+        },
+        "top_usuarios": {
+          "e2f9996e-92b0-4f69-8e5f-8f542c39587a": "886",
+          "8f6772a5-b088-4ecf-b6f6-2f32cd3e3f45": "8",
+          "f9398c4c-d25e-42c2-96ed-afebc6f8cf9c": "1"
+        }
+      }
+    }
+  },
+  "comparativo_6_meses": [
+    {
+      "ambiente": "windows",
+      "modificaciones": 2107481,
+      "documentos_unicos": 394090,
+      "usuarios_activos": 7928,
+      "areas_activas": 374,
+      "porcentaje": 52.55
+    },
+    {
+      "ambiente": "onedrive",
+      "modificaciones": 1561598,
+      "documentos_unicos": 495033,
+      "usuarios_activos": 8082,
+      "areas_activas": 690,
+      "porcentaje": 38.94
+    },
+    {
+      "ambiente": "sharepoint",
+      "modificaciones": 341122,
+      "documentos_unicos": 134173,
+      "usuarios_activos": 4447,
+      "areas_activas": 543,
+      "porcentaje": 8.51
+    },
+    {
+      "ambiente": "fileserver",
+      "modificaciones": 8,
+      "documentos_unicos": 4,
+      "usuarios_activos": 2,
+      "areas_activas": 1,
+      "porcentaje": 0.0
+    }
+  ],
+  "comparativo_12_meses": [
+    {
+      "ambiente": "windows",
+      "modificaciones": 4471865,
+      "documentos_unicos": 844580,
+      "usuarios_activos": 7975,
+      "areas_activas": 376,
+      "porcentaje": 54.92
+    },
+    {
+      "ambiente": "onedrive",
+      "modificaciones": 3184658,
+      "documentos_unicos": 973905,
+      "usuarios_activos": 8359,
+      "areas_activas": 694,
+      "porcentaje": 39.11
+    },
+    {
+      "ambiente": "sharepoint",
+      "modificaciones": 484746,
+      "documentos_unicos": 186677,
+      "usuarios_activos": 5461,
+      "areas_activas": 577,
+      "porcentaje": 5.95
+    },
+    {
+      "ambiente": "fileserver",
+      "modificaciones": 895,
+      "documentos_unicos": 163,
+      "usuarios_activos": 3,
+      "areas_activas": 1,
+      "porcentaje": 0.01
+    }
+  ],
+  "tendencias_mensuales": {
+    "windows": {
+      "2025-06": {
+        "modificaciones": 14424,
+        "documentos_unicos": 1491,
+        "usuarios_activos": 2744
+      },
+      "2025-05": {
+        "modificaciones": 324130,
+        "documentos_unicos": 62864,
+        "usuarios_activos": 7177
+      },
+      "2025-04": {
+        "modificaciones": 447456,
+        "documentos_unicos": 87546,
+        "usuarios_activos": 7684
+      },
+      "2025-03": {
+        "modificaciones": 437829,
+        "documentos_unicos": 97228,
+        "usuarios_activos": 7632
+      },
+      "2025-02": {
+        "modificaciones": 400491,
+        "documentos_unicos": 108096,
+        "usuarios_activos": 7076
+      },
+      "2025-01": {
+        "modificaciones": 378586,
+        "documentos_unicos": 97266,
+        "usuarios_activos": 7316
+      },
+      "2024-12": {
+        "modificaciones": 358719,
+        "documentos_unicos": 86157,
+        "usuarios_activos": 6873
+      },
+      "2024-11": {
+        "modificaciones": 354093,
+        "documentos_unicos": 91564,
+        "usuarios_activos": 6504
+      },
+      "2024-10": {
+        "modificaciones": 465241,
+        "documentos_unicos": 116471,
+        "usuarios_activos": 6885
+      },
+      "2024-09": {
+        "modificaciones": 391450,
+        "documentos_unicos": 108616,
+        "usuarios_activos": 6107
+      },
+      "2024-08": {
+        "modificaciones": 363399,
+        "documentos_unicos": 98169,
+        "usuarios_activos": 6081
+      },
+      "2024-07": {
+        "modificaciones": 405715,
+        "documentos_unicos": 108059,
+        "usuarios_activos": 6222
+      }
+    },
+    "onedrive": {
+      "2025-06": {
+        "modificaciones": 156671,
+        "documentos_unicos": 67370,
+        "usuarios_activos": 5728
+      },
+      "2025-05": {
+        "modificaciones": 380677,
+        "documentos_unicos": 120391,
+        "usuarios_activos": 6418
+      },
+      "2025-04": {
+        "modificaciones": 233485,
+        "documentos_unicos": 92618,
+        "usuarios_activos": 5737
+      },
+      "2025-03": {
+        "modificaciones": 182404,
+        "documentos_unicos": 75919,
+        "usuarios_activos": 5628
+      },
+      "2025-02": {
+        "modificaciones": 269853,
+        "documentos_unicos": 106839,
+        "usuarios_activos": 6201
+      },
+      "2025-01": {
+        "modificaciones": 245405,
+        "documentos_unicos": 99602,
+        "usuarios_activos": 6016
+      },
+      "2024-12": {
+        "modificaciones": 287208,
+        "documentos_unicos": 116971,
+        "usuarios_activos": 5902
+      },
+      "2024-11": {
+        "modificaciones": 303468,
+        "documentos_unicos": 120341,
+        "usuarios_activos": 5798
+      },
+      "2024-10": {
+        "modificaciones": 299034,
+        "documentos_unicos": 103437,
+        "usuarios_activos": 5196
+      },
+      "2024-09": {
+        "modificaciones": 274722,
+        "documentos_unicos": 123883,
+        "usuarios_activos": 5285
+      },
+      "2024-08": {
+        "modificaciones": 223766,
+        "documentos_unicos": 96072,
+        "usuarios_activos": 4836
+      },
+      "2024-07": {
+        "modificaciones": 219522,
+        "documentos_unicos": 97807,
+        "usuarios_activos": 4988
+      }
+    },
+    "sharepoint": {
+      "2025-06": {
+        "modificaciones": 62047,
+        "documentos_unicos": 27259,
+        "usuarios_activos": 2130
+      },
+      "2025-05": {
+        "modificaciones": 117382,
+        "documentos_unicos": 43171,
+        "usuarios_activos": 2372
+      },
+      "2025-04": {
+        "modificaciones": 61325,
+        "documentos_unicos": 31155,
+        "usuarios_activos": 1887
+      },
+      "2025-03": {
+        "modificaciones": 34923,
+        "documentos_unicos": 16729,
+        "usuarios_activos": 2104
+      },
+      "2025-02": {
+        "modificaciones": 26587,
+        "documentos_unicos": 13961,
+        "usuarios_activos": 2203
+      },
+      "2025-01": {
+        "modificaciones": 31671,
+        "documentos_unicos": 17984,
+        "usuarios_activos": 2107
+      },
+      "2024-12": {
+        "modificaciones": 30633,
+        "documentos_unicos": 17116,
+        "usuarios_activos": 2034
+      },
+      "2024-11": {
+        "modificaciones": 28915,
+        "documentos_unicos": 12162,
+        "usuarios_activos": 1860
+      },
+      "2024-10": {
+        "modificaciones": 19745,
+        "documentos_unicos": 10973,
+        "usuarios_activos": 1691
+      },
+      "2024-09": {
+        "modificaciones": 20711,
+        "documentos_unicos": 11027,
+        "usuarios_activos": 1875
+      },
+      "2024-08": {
+        "modificaciones": 12152,
+        "documentos_unicos": 7298,
+        "usuarios_activos": 1582
+      },
+      "2024-07": {
+        "modificaciones": 23522,
+        "documentos_unicos": 12863,
+        "usuarios_activos": 1808
+      }
+    },
+    "fileserver": {
+      "2025-05": {
+        "modificaciones": 6,
+        "documentos_unicos": 3,
+        "usuarios_activos": 1
+      },
+      "2025-01": {
+        "modificaciones": 2,
+        "documentos_unicos": 1,
+        "usuarios_activos": 2
+      },
+      "2024-10": {
+        "modificaciones": 1,
+        "documentos_unicos": 1,
+        "usuarios_activos": 1
+      },
+      "2024-09": {
+        "modificaciones": 93,
+        "documentos_unicos": 36,
+        "usuarios_activos": 1
+      },
+      "2024-08": {
+        "modificaciones": 255,
+        "documentos_unicos": 92,
+        "usuarios_activos": 1
+      },
+      "2024-07": {
+        "modificaciones": 383,
+        "documentos_unicos": 64,
+        "usuarios_activos": 1
+      },
+      "2024-06": {
+        "modificaciones": 155,
+        "documentos_unicos": 49,
+        "usuarios_activos": 1
+      }
+    }
+  }
+}

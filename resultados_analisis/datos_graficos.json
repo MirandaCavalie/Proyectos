@@ -1,0 +1,293 @@
+{
+  "ambientes_general": [
+    {
+      "ambiente": "windows",
+      "modificaciones": 4471865,
+      "porcentaje": 54.92
+    },
+    {
+      "ambiente": "onedrive",
+      "modificaciones": 3185212,
+      "porcentaje": 39.12
+    },
+    {
+      "ambiente": "sharepoint",
+      "modificaciones": 484822,
+      "porcentaje": 5.95
+    },
+    {
+      "ambiente": "fileserver",
+      "modificaciones": 895,
+      "porcentaje": 0.01
+    }
+  ],
+  "ambientes_6m": [
+    {
+      "ambiente": "windows",
+      "modificaciones": 2107481,
+      "porcentaje": 52.55
+    },
+    {
+      "ambiente": "onedrive",
+      "modificaciones": 1561598,
+      "porcentaje": 38.94
+    },
+    {
+      "ambiente": "sharepoint",
+      "modificaciones": 341122,
+      "porcentaje": 8.51
+    },
+    {
+      "ambiente": "fileserver",
+      "modificaciones": 8,
+      "porcentaje": 0.0
+    }
+  ],
+  "ambientes_12m": [
+    {
+      "ambiente": "windows",
+      "modificaciones": 4471865,
+      "porcentaje": 54.92
+    },
+    {
+      "ambiente": "onedrive",
+      "modificaciones": 3184658,
+      "porcentaje": 39.11
+    },
+    {
+      "ambiente": "sharepoint",
+      "modificaciones": 484746,
+      "porcentaje": 5.95
+    },
+    {
+      "ambiente": "fileserver",
+      "modificaciones": 895,
+      "porcentaje": 0.01
+    }
+  ],
+  "tendencias_mensuales": {
+    "windows": {
+      "2025-06": {
+        "modificaciones": 14424,
+        "documentos_unicos": 1491,
+        "usuarios_activos": 2744
+      },
+      "2025-05": {
+        "modificaciones": 324130,
+        "documentos_unicos": 62864,
+        "usuarios_activos": 7177
+      },
+      "2025-04": {
+        "modificaciones": 447456,
+        "documentos_unicos": 87546,
+        "usuarios_activos": 7684
+      },
+      "2025-03": {
+        "modificaciones": 437829,
+        "documentos_unicos": 97228,
+        "usuarios_activos": 7632
+      },
+      "2025-02": {
+        "modificaciones": 400491,
+        "documentos_unicos": 108096,
+        "usuarios_activos": 7076
+      },
+      "2025-01": {
+        "modificaciones": 378586,
+        "documentos_unicos": 97266,
+        "usuarios_activos": 7316
+      },
+      "2024-12": {
+        "modificaciones": 358719,
+        "documentos_unicos": 86157,
+        "usuarios_activos": 6873
+      },
+      "2024-11": {
+        "modificaciones": 354093,
+        "documentos_unicos": 91564,
+        "usuarios_activos": 6504
+      },
+      "2024-10": {
+        "modificaciones": 465241,
+        "documentos_unicos": 116471,
+        "usuarios_activos": 6885
+      },
+      "2024-09": {
+        "modificaciones": 391450,
+        "documentos_unicos": 108616,
+        "usuarios_activos": 6107
+      },
+      "2024-08": {
+        "modificaciones": 363399,
+        "documentos_unicos": 98169,
+        "usuarios_activos": 6081
+      },
+      "2024-07": {
+        "modificaciones": 405715,
+        "documentos_unicos": 108059,
+        "usuarios_activos": 6222
+      }
+    },
+    "onedrive": {
+      "2025-06": {
+        "modificaciones": 156671,
+        "documentos_unicos": 67370,
+        "usuarios_activos": 5728
+      },
+      "2025-05": {
+        "modificaciones": 380677,
+        "documentos_unicos": 120391,
+        "usuarios_activos": 6418
+      },
+      "2025-04": {
+        "modificaciones": 233485,
+        "documentos_unicos": 92618,
+        "usuarios_activos": 5737
+      },
+      "2025-03": {
+        "modificaciones": 182404,
+        "documentos_unicos": 75919,
+        "usuarios_activos": 5628
+      },
+      "2025-02": {
+        "modificaciones": 269853,
+        "documentos_unicos": 106839,
+        "usuarios_activos": 6201
+      },
+      "2025-01": {
+        "modificaciones": 245405,
+        "documentos_unicos": 99602,
+        "usuarios_activos": 6016
+      },
+      "2024-12": {
+        "modificaciones": 287208,
+        "documentos_unicos": 116971,
+        "usuarios_activos": 5902
+      },
+      "2024-11": {
+        "modificaciones": 303468,
+        "documentos_unicos": 120341,
+        "usuarios_activos": 5798
+      },
+      "2024-10": {
+        "modificaciones": 299034,
+        "documentos_unicos": 103437,
+        "usuarios_activos": 5196
+      },
+      "2024-09": {
+        "modificaciones": 274722,
+        "documentos_unicos": 123883,
+        "usuarios_activos": 5285
+      },
+      "2024-08": {
+        "modificaciones": 223766,
+        "documentos_unicos": 96072,
+        "usuarios_activos": 4836
+      },
+      "2024-07": {
+        "modificaciones": 219522,
+        "documentos_unicos": 97807,
+        "usuarios_activos": 4988
+      }
+    },
+    "sharepoint": {
+      "2025-06": {
+        "modificaciones": 62047,
+        "documentos_unicos": 27259,
+        "usuarios_activos": 2130
+      },
+      "2025-05": {
+        "modificaciones": 117382,
+        "documentos_unicos": 43171,
+        "usuarios_activos": 2372
+      },
+      "2025-04": {
+        "modificaciones": 61325,
+        "documentos_unicos": 31155,
+        "usuarios_activos": 1887
+      },
+      "2025-03": {
+        "modificaciones": 34923,
+        "documentos_unicos": 16729,
+        "usuarios_activos": 2104
+      },
+      "2025-02": {
+        "modificaciones": 26587,
+        "documentos_unicos": 13961,
+        "usuarios_activos": 2203
+      },
+      "2025-01": {
+        "modificaciones": 31671,
+        "documentos_unicos": 17984,
+        "usuarios_activos": 2107
+      },
+      "2024-12": {
+        "modificaciones": 30633,
+        "documentos_unicos": 17116,
+        "usuarios_activos": 2034
+      },
+      "2024-11": {
+        "modificaciones": 28915,
+        "documentos_unicos": 12162,
+        "usuarios_activos": 1860
+      },
+      "2024-10": {
+        "modificaciones": 19745,
+        "documentos_unicos": 10973,
+        "usuarios_activos": 1691
+      },
+      "2024-09": {
+        "modificaciones": 20711,
+        "documentos_unicos": 11027,
+        "usuarios_activos": 1875
+      },
+      "2024-08": {
+        "modificaciones": 12152,
+        "documentos_unicos": 7298,
+        "usuarios_activos": 1582
+      },
+      "2024-07": {
+        "modificaciones": 23522,
+        "documentos_unicos": 12863,
+        "usuarios_activos": 1808
+      }
+    },
+    "fileserver": {
+      "2025-05": {
+        "modificaciones": 6,
+        "documentos_unicos": 3,
+        "usuarios_activos": 1
+      },
+      "2025-01": {
+        "modificaciones": 2,
+        "documentos_unicos": 1,
+        "usuarios_activos": 2
+      },
+      "2024-10": {
+        "modificaciones": 1,
+        "documentos_unicos": 1,
+        "usuarios_activos": 1
+      },
+      "2024-09": {
+        "modificaciones": 93,
+        "documentos_unicos": 36,
+        "usuarios_activos": 1
+      },
+      "2024-08": {
+        "modificaciones": 255,
+        "documentos_unicos": 92,
+        "usuarios_activos": 1
+      },
+      "2024-07": {
+        "modificaciones": 383,
+        "documentos_unicos": 64,
+        "usuarios_activos": 1
+      },
+      "2024-06": {
+        "modificaciones": 155,
+        "documentos_unicos": 49,
+        "usuarios_activos": 1
+      }
+    }
+  }
+}
