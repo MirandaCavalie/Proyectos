@@ -1,7 +1,4 @@
-# Archivos de credenciales - NUNCA subir
-.streamlit/secrets.toml
 kriptos-4624e10fab77.json
-bp_templates_bq.parquet
 
 __pycache__/
 *.py[cod]
@@ -32,19 +29,3 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.logBP_Templates_bigquery_ready.parquet
-BP_Templates_bigquery_ready.parquet
-*.parquet
